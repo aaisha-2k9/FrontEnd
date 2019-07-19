@@ -144,3 +144,17 @@
 .left-pane{
   width: 80%;
 }
+.custom-error{
+  display: block;
+  color: #f70000;
+}
+.success-message{
+  display: block;
+  color: #004d00;
+}
+.close {
+   color: #f70000;
+   float: right;
+   font-size: 28px;
+   display: none;
+ }
