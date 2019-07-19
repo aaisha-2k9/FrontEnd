@@ -63,13 +63,13 @@ function createCategoryInfo() {
   selectElement.setAttribute("OnChange", "showHideDiv(this)");
   categoryDiv.appendChild(selectElement);
   var fragment = document.createDocumentFragment();
-newsChannels.forEach(function(channel,index) {
-  var option = document.createElement('option');
-  option.text= channel;
-  option.value= index;
-  fragment.appendChild(option);
-});
-selectElement.appendChild(fragment);
+  newsChannels.forEach(function(channel, index) {
+    var option = document.createElement("option");
+    option.text = channel;
+    option.value = index;
+    fragment.appendChild(option);
+  });
+  selectElement.appendChild(fragment);
   let subscribeDiv = document.createElement("div");
   let subscribeText = document.createElement("text");
   subscribeText.innerHTML = "SUBSCIBE";
@@ -92,8 +92,8 @@ selectElement.appendChild(fragment);
   subscribeDiv.appendChild(subscribebutton);
   categoryDiv.appendChild(subscribeDiv);
   let errorMessage = document.createElement("text");
-      errorMessage.setAttribute("id", "customerror");
-categoryDiv.appendChild(errorMessage);
+  errorMessage.setAttribute("id", "customerror");
+  categoryDiv.appendChild(errorMessage);
   rightPannel.appendChild(categoryDiv);
 }
 
@@ -115,10 +115,11 @@ function loadChannelInfo(index) {
   newsContent.appendChild(newsTitle);
   let newsJournal = document.createElement("div");
   newsJournal.innerHTML = " Posted on 29 June //Category:Category " + index;
-  newsJournal.setAttribute("class", "news-journal")
+  newsJournal.setAttribute("class", "news-journal");
   newsContent.appendChild(newsJournal);
   let newsInfo = document.createElement("p");
-  newsInfo.innerHTML =    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Consectetur adispiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquauis ipsum suspendisse ultrices gravidasus commodo.";
+  newsInfo.innerHTML =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Consectetur adispiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquauis ipsum suspendisse ultrices gravidasus commodo.";
   newsInfo.setAttribute("class", "news-decscription");
   newsContent.appendChild(newsInfo);
   let btnContainer = document.createElement("div");
