@@ -1,160 +1,172 @@
-.header {
-  height: 10%;
-  background-color: #233954;
-  width: 80%;
-  padding: 4%;
-  color: white;
-  font-family:sans-serif
+/* Header */
+.titleMain {
+    background: rgb(4, 47, 97);
+    color: white;
+    height: 80px;
+    margin: 0px; 
+    line-height: 80px;
 }
-.h2{
-  color: white;
-  width: 30%;
-  display: inline;
+
+.titleHeading {
+    float: left;
+    margin: 0 0 0 20px;
 }
-.description{
-  color: white;
-  display: inline;
-  margin-left: 2%;
-  font-style: italic;
-  font-size: 14;
-  font-family: serif;
+
+.titleDesc {
+    float: left;
+    margin: 0 0 0 30px;
 }
-.body {
-  width: 85%;
+
+.minimumHeight{
+    min-height: 527px;
 }
-.news-image {
-  background-color: lightgray;
-  width:3%;
-  padding-left:15%;
-  padding-top:25%;
-  float: left;
+
+/* Post */
+.postImage {
+    width: 20%;
+    height: 200px;
 }
-.news-content{
-  display: inline;
-  color: #000000;
-  padding-left:1%;
+
+.postBody {
+    padding-left: 40px;
 }
-.news-container{
-  width: 76%;
-  margin:2%;
-  float: left;
+
+.postFlx {
+    height: 240px;
+    width: 95%;
+    margin-left: 15px;
+    margin-top: 10px;
 }
-.news-header {
-  font-size: 18px;
-  color: #233954;
-  font-weight: 700;
-  padding-left:1%;
+
+.postButton {
+    background: rgb(211, 44, 3);
+    height: 30px;
+    width: 180px;
+    color: white;
+    border:0;
 }
-.news-decscription{
-  font-family: "Calibri";
-  font-size: 14px;
-  display:block;
-  padding-left:20%;
-  text-align: justify;
+
+.divideLine {
+    margin: 10px 0 0 12px;
+    width: 95%;
 }
-.news-journal{
-  font-family: "Calibri";
-  font-size: 14px;
-  padding-left:20%;
-  font-style: italic;
+
+.spacingWithInPosts{
+    margin: 10px 0 0 0 ;
 }
-.btn-reading {
-  background-color: #ed674c;
-  color:   aliceblue;
-  display: block;
-  padding: 1%;
-  font-family: "Tahoma";
+
+.marginForPost {
+    margin: 5px 0 0 10px ;
 }
-.btn-continue{
-  padding-left:20%;
+
+/*category and Subscription */
+.sidePanelStyle {
+    width: 25%;
+    margin: 10px 30px 10px 10px;
 }
-.news-category{
-  color: #000000;
-  font-family: "Calibri";
-  font-size: 14px;
-  font-weight: bold;
-  padding-bottom: 2%;
+
+.lstBox {
+    width: 100%;
+    height: 25px;
 }
-.subscribe{
-  color: #000000;
-  font-family: "Calibri";
-  font-size: 14px;
-  font-weight: bold;
-  padding-top: 2%;
-  display: block;
+
+.txtBoxMeasures {
+    float: left;
+    width: 70%;
+    height: 25px;
 }
-.btn-subscribe{
-  background-color: #000000;
-  color: white;
-  margin:-2%;
-  padding: 1%;
-  font-family: "Calibri";
-  font-weight: bold;
-  font-size: 12px;
+
+.btnSubscribe {
+    float: left;
+    color: white;
+    background: black;
+    height: 30px;
+    border:0;
+    z-index: 20;
 }
-.email-address{
-  padding: 1%;
-  color: #000000;
-  font-family: "Calibri";
-  font-size: 12px;
-  display: inline;
-  width:13%;
+
+/* General */
+* { 
+    margin:0; 
+    font-family: Arial;
 }
-.category-dropdown{
-  padding-bottom: 1%;
-  padding-top:2%;
+
+.flxRow {
+    display: flex;
+    flex-direction: row;
 }
-.dropdown{
-  padding: 1%;
-  color: #000000;
-  font-family: "Calibri";
-  font-size: 14px;
-  width:20%;
+
+    
+.flxColumn {
+        display: flex;
+        flex-direction: column;
 }
-.footer {
-  width:100%;
-  background-color: #233954;
-  margin-top:2%;
-  padding: 2%;
-  color: white;
-  font-size: 12px;
-  text-align: center;
-  float: left;
-  font-family: sans-serif;
+
+.allPosts {
+        width: 95%;
+        margin : 10px 0 0 10px;
 }
-.custom-popup{
-  display: block;
-  border: 2px solid #aaa;
-  position: fixed;
-  width: 55%;
-  height: 35%;
-  left: 10%;
-  top:30%;
-  padding: 2%;
-  margin: :2%;
-  box-sizing: border-box;
-  border-color: #233954;
-  background-color: White;
-  opacity: 1;
+
+.fontLight {
+    font-weight: 100;
+    color: rgba(97, 96, 96, 0.904);
 }
-.right-pane{
-  position: relative;
-  left:20%;
+
+/* Footer */
+.footerContent {
+    display: flex;
+    align-items: center;
+    background: rgb(4, 47, 97);
+    color: white;
+    height: 50px;
 }
-.left-pane{
-  width: 80%;
+
+.marginForFooterContent {
+    margin: 0 0 0 45%;
 }
-.custom-error{
-  display: block;
-  color: #f70000;
-}
-.success-message{
-  display: block;
-  color: #004d00;
-}
-.close {
-   color: #f70000;
-   float: right;
-   font-size: 28px;
-   display: none;
- }
+
+
+/* PopUp */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* PopUp classes */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .subscribeFlx{
+      margin: 2% 0 0 56%;
+      width: 20%;
+  }
