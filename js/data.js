@@ -12,7 +12,7 @@ export const constants =  {
     {
         id: "titleContainer",
         element: "div",
-        class: "titleMain flxRow",
+        class: "header flxRow",
         parent: "headerTitle",
         text: "",
         event: "",
