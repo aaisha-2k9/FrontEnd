@@ -1,35 +1,23 @@
-import {
-    constants
-} from "./data.js";
+import { constants } from "./data.js";
 
-import {
-    dataFetch
-} from "./NewsModel.js";
+import { dataFetch } from "./NewsModel.js";
 
-import {
-    viewPage
-} from "./NewsView.js";
-
+import { viewPage } from "./NewsView.js";
 
 export class postControl {
     category = "cnn";
-
-
     init = () => {
         let obj = new viewPage();
         obj.renderPage();
-
     }
 
     onLoadPage = () => {
         let obj = new dataFetch(this.category);
         obj.fetchData();
-
     }
 
     setPostData = (sourceOfPost, data) => {
         let postData = [];
-        //urlToImage,title,publishedAt,description,{postCategory:this.source}
         data.forEach(function (eachPost) {
             postData.push({
                 imageSrc: eachPost.urlToImage,
@@ -41,23 +29,19 @@ export class postControl {
         });
         let obj = new viewPage();
         obj.setData(postData);
-
     }
 
     sourceSelectionEvent = (sourceOfPost, data) => {
-    //let objConst = new constants();
-    //Getting value selected by user
-    let listBox = document.getElementById("categoryLstBox");
-    let selectedValue = listBox.value;
+        let listBox = document.getElementById("categoryLstBox");
+        let selectedValue = listBox.value;
 
-    let myNode = document.getElementById("content");
-    while (myNode.firstChild) {
-        myNode.removeChild(myNode.firstChild);
-    }
-    let selectedcategory = constants.categories[selectedValue];
-    let obj = new dataFetch(selectedcategory);
-    obj.fetchData();
-
+        let myNode = document.getElementById("content");
+        while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+        }
+        let selectedcategory = constants.categories[selectedValue];
+        let obj = new dataFetch(selectedcategory);
+        obj.fetchData();
     }
 }
 
@@ -85,43 +69,34 @@ export class events {
             alert("Enter Valid Email address");
         }
     }
-
-
-        //popup close event
-     popUpCloseBtn = () => {
+    //popup close event
+    popUpCloseBtn = () => {
         document.getElementById("popUp").style.display = "none";
     }
-       //Events
+    //Events
 
     //List Box Selection Event
     listBoxSelection = () => {
-
         let obj = new postControl();
         obj.sourceSelectionEvent();
-
     }
-
     //Continue Reading event
- continueReading = (obj) => {
-    self = obj;
-    //displaying popup
-    document.getElementById("popUp").style.display = "block";
-    //getting related text to display
-    let btnId = self.id;
-    let postId = btnId.substr(17);
-    let title = document.getElementById("postTitleId" + postId).textContent;
-    let titleDesc = document.getElementById("postTitleDescId" + postId).textContent;
-    let desc = document.getElementById("postDescId" + postId).textContent;
+    continueReading = (obj) => {
+        self = obj;
+        //displaying popup
+        document.getElementById("popUp").style.display = "block";
+        //getting related text to display
+        let btnId = self.id;
+        let postId = btnId.substr(17);
+        let title = document.getElementById("postTitleId" + postId).textContent;
+        let titleDesc = document.getElementById("postTitleDescId" + postId).textContent;
+        let desc = document.getElementById("postDescId" + postId).textContent;
 
-    //Creating and displaying text
-    let content = title + "<br><br>" + titleDesc + "<br><br>" + desc + "<br>";
-    document.getElementById("contentDisplayArea").innerHTML = content;
-}
-
+        //Creating and displaying text
+        let content = title + "<br><br>" + titleDesc + "<br><br>" + desc + "<br>";
+        document.getElementById("contentDisplayArea").innerHTML = content;
     }
-
-
-
+}
 //export default events;
 
 const app = new postControl();
